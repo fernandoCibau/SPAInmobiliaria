@@ -30,6 +30,12 @@ main{
     height: 90%;
 }
 
+.contenedorBarra{
+    width: 100%;
+    padding: 1em;
+    background-color: #f0f0f0;
+}
+
 .secMenu{
     /* background-color: rgba(0, 128, 0, 0.174); */
     background-color: rgba(128, 128, 128, 0.493);

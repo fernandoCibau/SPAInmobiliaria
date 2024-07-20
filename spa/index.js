@@ -46,7 +46,7 @@ $("#cargarDatos").click( ()=>{
         data: "todos",
 
         success: ( resultado, estado )=>{
-            alert(estado + " " + resultado)
+            alert(estado + "\n " + resultado);
 
             let lista = JSON.parse( resultado);
 
@@ -62,8 +62,8 @@ $("#cargarDatos").click( ()=>{
                     let divContenedorPrincipal = $("<div></div>").attr("class","contenedorPrincipal");
                     
                     let divContenedorFoto = $("<div></div>").attr("class","contenedorFoto");
-                    // divContenedorFoto.append("<img src='imagen.jpeg'></img>");
                     divContenedorFoto.append( " <img class='fotoPDF' src='data:img/jpeg;base64,"+ inmueble["imagenes"][0] + " ' ></img>" );
+                    divContenedorFoto.append("<input type='button' value='boton' class='bSiguiente'>")
                     // console.log( inmueble.imagenes)
                     divContenedorPrincipal.append(divContenedorFoto);
                     

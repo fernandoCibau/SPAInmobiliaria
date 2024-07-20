@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Inmobiliario</title>
 </head>
 <body>
@@ -18,12 +19,16 @@
 
     <main>
 
+
         <section name="menu" class="secMenu" id="secMenu" >
             <p>menu</p>
             <div id="resultado"></div>
         </section>
 
         <section name="table" class="secTable" id="secTable">
+        <div class="contenedorBarra">
+        <div class="icono"><i class="fa-duotone fa-solid fa-trash-can"></i></div>
+        </div>
 
             <table>
                 <tbody>
@@ -83,7 +88,7 @@
                 <h2>Datos de la Propiedad</h2>
                 <p id="fomX">X</p>
             </div>
-            <!-- FALTA EL MULTIMEDIA PARA LA FOTO EN EL FORM -->
+
             <form action="#" method="POST" id="formAltaPropiedad" enctype="multipart/form-data"> 
 
                 <div class="form-row">
