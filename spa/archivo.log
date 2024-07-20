@@ -1,0 +1,15 @@
+
+[2024-07-16 23:10:36] Error: Error : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipoInmeble' in 'field list' in line LINEA : 16 - propiedadAlta.php
+[2024-07-16 23:11:48] Error: Error : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipoInmeble' in 'field list' in line 31
+[2024-07-16 23:12:54] Error: Error : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipoInmeble' in 'field list' in line 31propiedadAlata.php
+[2024-07-16 23:13:37] Error: Error : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipoInmeble' in 'field list' in line 31 : propiedadAlata.php
+[2024-07-16 23:28:40] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tipoInueble' in 'field list' in line 30 : propiedadAlata.php
+[2024-07-17 00:25:15] Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'C00001' for key 'legajo' in line 30 : propiedadAlta.php
+[2024-07-17 00:28:29] Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'C00001' for key 'legajo' in line 30 : propiedadAlta.php
+[2024-07-17 00:28:59] Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'C00001' for key 'legajo' in line 30 : propiedadAlta.php
+[2024-07-17 00:29:58] Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'C00001' for key 'legajo' in line 29 : propiedadAlta.php
+[2024-07-17 00:30:06] Error: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'C00001' for key 'legajo' in line 29 : propiedadAlta.php
+[2024-07-17 00:32:03] Error: PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'C00001' for key 'legajo' in C:\xampp\htdocs\inmobiliaria\spa\propiedadAlta.php:12
+Stack trace:
+#0 C:\xampp\htdocs\inmobiliaria\spa\propiedadAlta.php(12): PDOStatement->execute()
+#1 {main} in line 29 : propiedadAlta.php
