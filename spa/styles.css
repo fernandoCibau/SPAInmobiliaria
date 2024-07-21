@@ -64,13 +64,28 @@ table tbody tr td{
     width: 100vw;
 }
 
+.contenedorIconos{
+    display: flex;
+    flex-direction: column;
+    background-color: #4CAF50;
+    align-items: center;
+    justify-content: space-around;
+}
+.contenedorIconos .iconos{
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+}
+
 .contenedorPrincipal{
+    position: relative;
     display:  flex;
     height: 12em;
 }
 
 .contenedorFoto{
     width: 17%;
+    margin: 0%;
     border: solid;
 }
 
@@ -79,10 +94,10 @@ table tbody tr td{
     height: 100%;
 }
 
-.bAnterior{
-    position: relative;
+.btnAnterior{
+    position: absolute;
     top: 50%;
-    left: -16%;
+    left: 0.3%;
     height: 2em;
     width: 2em;
     border-radius: 100%;
@@ -92,10 +107,10 @@ table tbody tr td{
     cursor: pointer;
 }
 
-.bSiguiente{
-    position: relative;
+.btnSiguiente{
+    position: absolute;
     top: 50%;
-    left: -4.5%;
+    left: 14.3%;
     height: 2em;
     width: 2em;
     border-radius: 100%;
@@ -142,19 +157,10 @@ table tbody tr td{
     margin: 0 0 0 2%;
 }
 
-/* .div1{
-    width:33%;
-    border-left: solid;
+.ocultar{
+    display: none;
+    pointer-events: none;
 }
-.div2{
-    width: 33%;
-    border-left: solid;
-} */
-
-/* .div3{
-    width: 33%;
-    border-left: solid;
-}  */
 
 
 /* ----------------------------------------------------- */

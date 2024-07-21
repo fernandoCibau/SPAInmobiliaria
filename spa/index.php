@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Inmobiliario</title>
 </head>
 <body>
@@ -31,54 +30,7 @@
         </div>
 
             <table>
-                <tbody>
-                    <tr>
-                        <td>
-<!-- 
-                            <div class="contenedorPrincipal">
-                                <div class="contenedorFoto" id="foto">
-                                    <img src="imagen.jpeg" alt="">
-                                </div>
-                                
-                                <div class="contenedorDetalle">
-
-                                    <div class="contenedorP">
-                                        <p class="pLegajo">Legajo:45234</p>
-                                        <p>Sucursal</p>
-                                        <p>Ope: Venta</p>
-                                    </div>
-                                
-                                    <div class="contenedorDiv" id="contenedorDiv" >
-                                        <div class="div1 divGeneral" id="div1">
-                                            <p>Amb.......................</p>
-                                            <p>Calle......................</p>
-                                            <p>Nro........................</p>
-                                            <p>Piso.......................</p>
-                                            <p>Dto........................</p>
-                                            <p>Barrio....................</p>
-                                        </div>
-                                        <div class="div2 divGeneral" id="div2">
-                                            <p>Tipo Inmueble........</p>
-                                            <p>Valor......................</p>
-                                            <p>Localidad...............</p>
-                                            <p>Orientacion............</p>
-                                            <p>Fecha Ing..............</p>
-                                            <p>Ubicacion..............</p>
-                                        </div>
-                                        <div class="div3 divGeneral" id="div3">
-                                            <p>Entre Calle 1.........</p>
-                                            <p>Entre Calle 2.........</p>
-                                            <p>Propietario.............</p>
-                                            <p>Sub Cubierta..........</p>
-                                            <p>Sup. Libre...............</p>
-                                            <p>Sup. Total...............</p>
-                                        </div>  
-                                    </div>
-                                </div>                
-                            </div>
-
-                        </td> -->
-                    </tr>
+                <tbody>                             
                 </tbody>
             </table>
         </section>
@@ -171,11 +123,11 @@
                         <option value="venta">Venta</option>
                     </select>
 
-                    <label for="fotos">Guardar Fotos</label>
-                    <input type="file" name="imagenes[]" id="i" multiple accept="image/*">
+                    <label for="fotos" id="labelImagenes">Guardar Fotos</label>
+                    <input type="file" name="imagenes[]" id="imagenes" multiple accept="image/*">
                 </div>
 
-                <button type="submit">Enviar</button>
+                <button type="submit" id="btnForm" name="alta">Enviar</button>
             </form>
         </section>
     
