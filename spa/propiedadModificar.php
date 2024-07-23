@@ -54,7 +54,7 @@
             $conexion = null;
             
             if($resultado){
-                $mensaje = "MODIFICADO CON EXITO...! \n";
+                $mensaje = "MODIFICADO CON EXITO...!" . "\n";
                 echo $mensaje;
             }
             else{
@@ -68,7 +68,7 @@
         }
     } catch (Exception $e) {
         include "funcionError.php";
-        $mensaje = $e->getMessaege();
+        $mensaje = $e->getMessage(); 
         $linea = __LINE__ . " : " .  "propiedadModificar.php";
         error($mensaje, $linea );
         echo json_encode( $mensaje );

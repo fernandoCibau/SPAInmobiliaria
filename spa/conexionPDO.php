@@ -17,7 +17,7 @@
     }
     catch(PDOExecption $e ){
         include "funcionError.php";
-        $mensaje = $e->getMessage();
+        $mensaje = $e->getMessage(); 
         error( $mensaje,  $linea = __LINE__);
     }
 ?>

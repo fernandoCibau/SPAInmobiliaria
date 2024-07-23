@@ -263,3 +263,78 @@ form button:hover {
     transition: 2s;
 }
 
+/* ----------------------------------------------------- */
+/*                 MODAL FOTO                         */
+/* ----------------------------------------------------- */
+
+
+.seccionModalFoto{
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    left: 25%;
+    border: solid;
+}
+
+.encabezadoModalFoto p{
+    width: 5%;
+    background-color: rgb(247, 58, 58);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: 1s;
+    position: absolute;
+}
+
+.encabezadoModalFoto :hover{
+    background-color: green;
+    transition: 1s;
+}
+
+.contenedorModalFoto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: #666
+}
+
+.fotoModal{
+    width: 100%;
+    height: 100%;
+}
+
+.agregarFotoVacio{
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.btnAntModal{
+    position: absolute;
+    top: 50%;
+    left: 0.3%;
+    height: 2em;
+    width: 2em;
+    border-radius: 100%;
+    background-color: #00000090;
+    color: wheat;
+    border: none;
+    cursor: pointer;
+}
+
+.btnSigModal{
+    position: absolute;
+    top: 50%;
+    right: 0.3%;
+    height: 2em;
+    width: 2em;
+    border-radius: 100%;
+    background-color: #00000090;
+    color: wheat;
+    border: none;
+    cursor: pointer;
+}

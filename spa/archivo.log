@@ -13,3 +13,5 @@
 Stack trace:
 #0 C:\xampp\htdocs\inmobiliaria\spa\propiedadAlta.php(12): PDOStatement->execute()
 #1 {main} in line 29 : propiedadAlta.php
+[2024-07-22 18:12:40] Error: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in line 47 : propiedadModificar.php
+[2024-07-22 18:19:34] Error: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in line 47 : propiedadModificar.php

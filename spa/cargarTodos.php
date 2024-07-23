@@ -49,7 +49,11 @@
                                 array_push($litaImagenes, $imagenBase64);
                             }
                             $nuevoInmueble->imagenes = $litaImagenes;
+                        }else{
+                            $litaImagenes= [];
+                            $nuevoInmueble->imagenes = $litaImagenes;
                         }
+                        array_push($listaInmuebles, $nuevoInmueble);
                     } catch (Exception $e) {
                         include "funcionError.php";
                         $mensaje = $e->getMessaege();
@@ -58,7 +62,6 @@
                         echo json_encode( $mensaje );
                     }
 
-                    array_push($listaInmuebles, $nuevoInmueble);
                 }
 
                 echo  json_encode( $listaInmuebles);
@@ -66,6 +69,7 @@
             }else {
                     $error = new stdClass();
                     $error->mensaje = "NO SE ENCONTRO REGISTO EN LA  TABLA...!";
+                    $error->resultado = FALSE;
                     echo json_encode( $error);
             } 
         }else{

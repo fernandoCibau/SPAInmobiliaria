@@ -130,6 +130,14 @@
                 <button type="submit" id="btnForm" name="alta">Enviar</button>
             </form>
         </section>
+
+        <section name="modalFoto" class="seccionModalFoto off" id="seccionModalFoto">
+            <div class="encabezadoModalFoto">
+                <p id="fotoX">X</p>
+            </div>
+            <div class="contenedorModalFoto" id="contenedorModalFoto">
+            </div>
+        </section>
     
     </main>
 

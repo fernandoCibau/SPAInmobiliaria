@@ -53,15 +53,14 @@
                 $conexion = null;
                 
                 if($resultado){
-                    $mensaje = "GUARDADO CON EXITO...! \n";
+                    $mensaje = "GUARDADO CON EXITO...!" . "\n";
 
                     //// --------------------------------------------------
                     ////          AGREGAMOS FOTOS
                     //// --------------------------------------------------
 
                     //     // $imagen =  base64_encode( file_get_contents($_FILES['imagen']['tmp_name'] ) ) ;
-
-                    if(isset($_FILES['imagenes'])) {
+                    if(isset($_FILES['imagenes'] ) && $_FILES['imagenes']['name'][0] != "" ) {
                         include "agregarJpeg.php";
                         $num_archivos = count($_FILES['imagenes']['name']);
 
@@ -71,7 +70,7 @@
                             cargarImagen( $nombre_archivo, $_POST['legajo'] );
                         }
                     }else{
-                        $mensaje = $mensaje . "SIN IMAGEN \n";
+                        $mensaje = $mensaje . "SIN IMAGEN" . "\n";
                     }
 
                     echo $mensaje;
