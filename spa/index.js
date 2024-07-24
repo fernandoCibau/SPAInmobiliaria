@@ -34,6 +34,10 @@ let ajaxAlta = ( formData)=>{
             try {
                 alert(estado + "\n" + resultado);
                 console.log(resultado)
+                modalOff();
+                cargarTabla();
+                vaciarForm();
+
             }catch (error) {
                 console.error("Error en alta de los datos:", error);
                 alert("Error en la carga de datos. Consulta la consola para más detalles.");
@@ -103,11 +107,15 @@ let eliminar = (inmueble)=>{
 }
 
 let ampliar = (inmueble) =>{
+
     $("#seccionModalFoto").attr("class", "seccionModalFoto on");
+    $("#contenedorModalFotoPrincipal").empty();
+    let contenedorModalFoto = $("<div class='contenedorModalFoto' id='contenedorModalFoto'></div>")
+    $("#contenedorModalFotoPrincipal").append(contenedorModalFoto);
 
             if(inmueble.imagenes.length > 0 ){
 
-                $("#contenedorModalFoto").append(`<img class='fotoModal'  src='data:image/jpeg;base64,${inmueble.imagenes[0]}' />`);
+                contenedorModalFoto.append(`<img class='fotoModal'  src='data:image/jpeg;base64,${inmueble.imagenes[0]}' />`);
 
                 let cont =0;
                 let btnAnterior = $("<input type='button' value='<' class='btnAntModal'>").click( ()=>{
@@ -127,12 +135,13 @@ let ampliar = (inmueble) =>{
                     
                 });
 
-                $("#seccionModalFoto").append(btnAnterior);
-                $("#seccionModalFoto").append(btnSigiente);
+                $("#contenedorModalFotoPrincipal").append(btnAnterior);
+                $("#contenedorModalFotoPrincipal").append(btnSigiente);
             }
-            else{
-                $("#contenedorModalFoto").append(`SIN FOTO`);
-                $("#contenedorModalFoto").append("<input type='button' value='Agregar Foto' id='agregarFotoVacio' class='agregarFotoVacio'> ");
+
+            if( inmueble.imagenes.length == 0 ){
+                contenedorModalFoto.append(`SIN FOTO`);
+                contenedorModalFoto.append("<input type='button' value='Agregar Foto' id='agregarFotoVacio' class='agregarFotoVacio'> ");
             }
             $("header").attr("class", "bloqueo");
             $("#secMenu").attr("class", "secMenu bloqueo");
@@ -204,6 +213,7 @@ let vaciarForm = (  ) =>{
 }
 
 let cargarTabla = () =>{
+
     $("tbody").html("BUSCANDO...!");
     $.ajax({
         url: "cargarTodos.php",
@@ -220,6 +230,7 @@ let cargarTabla = () =>{
                 
                 $("tbody").empty();
 
+
                 if( lista.resultado != false ){
 
                     lista.forEach( inmueble => {
@@ -227,13 +238,17 @@ let cargarTabla = () =>{
                         let td = $("<td></td>") ;
                         
                         let divContenedorPrincipal = $("<div></div>").attr("class","contenedorPrincipal");
+                        let divContenedorFotoYBtn = $("<div></div>").attr("class","divContenedorFotoYBtn");
                         let divContenedorFoto = $("<div></div>").attr("class","contenedorFoto");
                         divContenedorFoto.attr("id",`${inmueble.legajo}`);
+                        divContenedorFotoYBtn.append( divContenedorFoto );
+
                         
                         if(inmueble.imagenes.length > 0 ){
-
+                            
                             divContenedorFoto.append(`<img class='fotoPDF'  src='data:image/jpeg;base64,${inmueble.imagenes[0]}' />`);
                             let cont =0;
+
                             let btnAnterior = $("<input type='button' value='<' class='btnAnterior'>").click( ()=>{
                                 let cantidadDeImagenes = inmueble["imagenes"].length;
                                 $("#contenedorModalFoto").append(`<img class='fotoPDF'  src='data:image/jpeg;base64,${inmueble.imagenes[0]}' />`);
@@ -252,14 +267,16 @@ let cargarTabla = () =>{
                                 $(`#${inmueble.legajo}`).append(`<img class='fotoPDF'  src='data:image/jpeg;base64,${inmueble.imagenes[cont]}' />`);
                                 
                             });
-                            divContenedorPrincipal.append(btnAnterior);
-                            divContenedorPrincipal.append(btnSigiente);
+
+                            divContenedorFotoYBtn.append(btnAnterior);
+                            divContenedorFotoYBtn.append(btnSigiente);
                         }
                         else{
                             divContenedorFoto.append(`SIN FOTO`);
-                            divContenedorFoto.append("<input type='button' value='Agregar Fot' id='agregarFotoVacio'> ");
+                            divContenedorFoto.append("<input type='button' value='Agregar Foto' id='agregarFotoVacio'> ");
                         }
-                        divContenedorPrincipal.append(divContenedorFoto);
+
+                        divContenedorPrincipal.append(divContenedorFotoYBtn);
                         
                         let divIconos = $("<div></div>").attr("class", "contenedorIconos");
                         let btnModificar = $("<img  src='icon/modificar.png' class='iconos' id='modificar' 'alt='modificar'>").click( ()=>{

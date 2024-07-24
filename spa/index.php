@@ -132,11 +132,15 @@
         </section>
 
         <section name="modalFoto" class="seccionModalFoto off" id="seccionModalFoto">
-            <div class="encabezadoModalFoto">
+
+            <div class="encabezadoModalFoto" id="encabezadoModalFoto">
                 <p id="fotoX">X</p>
             </div>
-            <div class="contenedorModalFoto" id="contenedorModalFoto">
+
+            <div class="contenedorModalFotoPrincipal" id="contenedorModalFotoPrincipal">
+                <div class="contenedorModalFoto" id="contenedorModalFoto"></div>
             </div>
+            
         </section>
     
     </main>
