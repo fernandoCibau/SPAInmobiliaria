@@ -243,7 +243,6 @@ let cargarTabla = () =>{
                         divContenedorFoto.attr("id",`${inmueble.legajo}`);
                         divContenedorFotoYBtn.append( divContenedorFoto );
 
-                        
                         if(inmueble.imagenes.length > 0 ){
                             
                             divContenedorFoto.append(`<img class='fotoPDF'  src='data:image/jpeg;base64,${inmueble.imagenes[0]}' />`);
@@ -282,15 +281,19 @@ let cargarTabla = () =>{
                         let btnModificar = $("<img  src='icon/modificar.png' class='iconos' id='modificar' 'alt='modificar'>").click( ()=>{
                             modificar( inmueble );
                         });
+
                         let btnEliminar = $("<img  src='icon/papelera.png' class='iconos' id='papelera' 'alt='papelera'>").click( ()=>{
                             eliminar( inmueble );
                         });
+
                         let btnPDF = $("<img  src='icon/pdf.png' class='iconos' id='pdf' 'alt='pdf'>").click( ()=>{
                             // descargaPDF();
                         });
+
                         let btnAmpliar = $(`<img  src='icon/ampliar.png' class='iconos' id='${inmueble.legajo}' 'alt='ampliar'>`).click( ()=>{
                             ampliar(inmueble);
                         });
+
                         divIconos.append(btnModificar);
                         divIconos.append(btnEliminar);
                         divIconos.append(btnPDF);
@@ -354,6 +357,7 @@ let cargarTabla = () =>{
     });
 }
 
+
 //----------------------------------------------------------
 //                  BOTONES
 //----------------------------------------------------------
@@ -364,6 +368,12 @@ $("#altaInmueble").click( ()=>{
 $("#cargarDatos").click( ()=>{
     cargarTabla();
 });
+
+$("#cerrarSesion").click( ()=>{
+    if(confirm("¿Confirmar?")){
+        location.href="../cerrarSesion.php";
+    }
+})
 
 //----------------------------------------------------------
 //                  MODAL

@@ -8,4 +8,3 @@ function error($mensaje, $linea) {
     error_log($errorMessage, 3, 'archivo.log');
 }
 ?>
-

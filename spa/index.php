@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if( !isset( $_SESSION["usuario"]["idSesion"] ) ){
+        header( "location: ../index.php");
+        exit;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +21,7 @@
         <div>
             <input type="button" value="Cargar Datos" id="cargarDatos">
             <input type="button" value="Alta Inmueble" id="altaInmueble">
+            <input type="button" value="Cerrar Sesion" id="cerrarSesion">
         </div>
     </header>
 

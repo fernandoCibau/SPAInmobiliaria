@@ -1,0 +1,94 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 10%;
+    background-color: grey;
+}
+
+main{
+    width: 80%;
+    height: 75%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.489);
+}
+
+.seccionForm{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos generales del formulario */
+.formSesion {
+    max-width: 18.75em;
+    margin: 0 auto;
+    padding: 1.3em;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las etiquetas de los campos */
+.formSesion label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+/* Estilos para los campos de entrada */
+.formSesion input[type="email"],
+.formSesion input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em;
+    box-sizing: border-box; /* Para incluir padding y borde en el tamaño total */
+}
+
+/* Estilos para el botón de enviar */
+.formSesion button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.formSesion button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el foco en los campos */
+.formSesion input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+footer{
+    width: 100%;
+    height: 15%;
+    background-color: gray;
+}
